@@ -1,0 +1,72 @@
+*{box-sizing: border-box;}
+.mainContainer{
+    width:80%;
+    margin: 10em auto;
+    box-shadow: 1px 1px 3px gray;
+    padding: 1.5em 2em;
+}
+.todo_text{
+    width:60%;
+    padding:0.5em 1em;
+    background-color: aliceblue;
+    font-size: 1.2em;
+    border-radius: 10px;
+}
+
+.btn_submit{
+    background-color: darkgreen;
+    border: none;
+    font-size: 1.2em;
+    padding:0.5em 2em;
+    margin-left: 1em;
+    border-radius: 10px;
+    font-weight: 500;
+    color: aliceblue;
+
+}
+
+.btn_submit:hover{
+    background-color: greenyellow;
+    color: black;
+    box-shadow: 0px 0px 5px 2px black;
+    cursor: pointer;
+}
+
+.btn_group{
+    margin-top: 2em;
+}
+
+.btn_del{
+    background-color: crimson;
+    font-size: 1.2em;
+    padding:0.5em 2em;
+    margin-right: 1em;
+    border-radius: 10px;
+    color: whitesmoke;
+}
+
+.btn_del:hover{
+    background-color: whitesmoke;
+    color: crimson;
+    box-shadow: 0px 0px 5px 2px black;
+    cursor: pointer;
+}
+
+.list_do{
+    margin-top: 2em;
+    font-size: 1.2em;
+    list-style: none;
+    background-color: rgb(230,230,230);
+}
+
+.list_item{
+    padding: 1em;
+    border:solid 1px rgb(100,100,100)
+    
+}
+
+.completed{
+    background-color: rgba(250,120,10,0.5);
+    opacity: 0.5;
+    text-decoration: line-through;
+}
