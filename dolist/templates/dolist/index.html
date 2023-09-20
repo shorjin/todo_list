@@ -9,22 +9,28 @@
 <body>
     <main class="mainContainer">
         <h1 class="title">My do list</h1>
-        <form class="form">
+        <form class="form" method="post" action="{% url 'add_todo' %}">
+            {% csrf_token %}
             <div class="form-group">
-                <input type="text" class="todo_text" placeholder="What to do?..">
-                <button class="btn_submit">ADD</button>
+                <input type="text" class="todo_text" name="text" placeholder="What to do?..">
+                <button class="btn_submit" type="submit">ADD</button>
             </div>
         </form>
+        
+
+
+
         <!-- delete buttons -->
         <div class="btn_group">
-            <button class="btn_del">DELETE COMPLETED</button>
-            <button class="btn_del">DELETE ALL</button>
+            <a href="{% url 'delete_completed' %}" class="btn_del">DELETE COMPLETED</a>
+            <a href="{% url 'delete_all' %}" class="btn_del">DELETE ALL</a>
+
         </div>
 
         <!-- LIST DISPLAY -->
         <ul class="list_do">
             <li class="list_item">Add a to-do list</li>
-            <li class="list_item completed">Finish Project 1</li>
+         
             {% for i in todo_items %}
             {% if i.completed %}
             <li class="list_item completed">{{ i.text }}</li>
