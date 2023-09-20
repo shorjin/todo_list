@@ -23,10 +23,20 @@
 
         <!-- LIST DISPLAY -->
         <ul class="list_do">
-            <li class="list_item">Add a do list</li>
-            <li class="list_item completed">Finish project 1</li>
+            <li class="list_item">Add a to-do list</li>
+            <li class="list_item completed">Finish Project 1</li>
+            {% for i in todo_items %}
+            {% if i.completed %}
+            <li class="list_item completed">{{ i.text }}</li>
+            {% else %}
+            <li class="list_item">{{ i.text }}</li>
+            {% endif %}
+        {% endfor %}
+        
+     
+            <li class="fully_completed">Complete project 1 </li>
         </ul>
-
+        
 
     </main>
     

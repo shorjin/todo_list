@@ -1,5 +1,9 @@
 from django.shortcuts import render
+from .models import Todolist
 
 # Create your views here.
 def index(request):
-    return render(request,"dolist/index.html")
+    todo_items=Todolist.objects.order_by('id')
+    context={'todo_items':todo_items}
+    return render(request,"dolist/index.html",context)
+ 
